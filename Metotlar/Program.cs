@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Claims;
 
 namespace Metotlar
 {
@@ -30,11 +31,19 @@ namespace Metotlar
                 Console.WriteLine(urun.Fiyati);
                 Console.WriteLine(urun.Aciklama);
                 Console.WriteLine("---------------------------");
-
-
             }
- 
-          
+            Console.WriteLine("------------Metotlar-----------");
+            //instance-class örnegi,metot çagırıyoruz
+            //encapsulation-kapsülleme
+
+            SepetManager sepetManager = new SepetManager();
+            sepetManager.Ekle(urun1);
+            sepetManager.Ekle(urun2);
+
+            sepetManager.Ekle2("Armut", "Yeşil armut", 12,10);
+            sepetManager.Ekle2("Elma", "Yeşil elma", 12,9);
+            sepetManager.Ekle2("Karpuz", "Diyarbakır karpuzu", 12,8);
+
         }
     }
 }
